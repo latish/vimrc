@@ -1,0 +1,54 @@
+" Bundles {
+    " Deps {
+        Bundle 'gmarik/vundle'
+        Bundle 'MarcWeber/vim-addon-mw-utils'
+        Bundle 'tomtom/tlib_vim'
+        if executable('ack-grep')
+            let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+            Bundle 'mileszs/ack.vim'
+        elseif executable('ack')
+            Bundle 'mileszs/ack.vim'
+        elseif executable('ag')
+            Bundle 'mileszs/ack.vim'
+            let g:ackprg = 'ag --nogroup --nocolor --column --smart-case'
+        endif
+    " }
+		Bundle 'scrooloose/nerdtree'
+		Bundle 'tpope/vim-surround'
+		Bundle 'spf13/vim-autoclose'
+		"Bundle 'kien/ctrlp.vim'
+		Bundle 'matchit.zip'
+		Bundle 'Lokaltog/vim-easymotion'
+
+" support colorschemes in terminal vim
+		Bundle 'godlygeek/csapprox'
+
+"keep nerdtree consistent across tabs
+		Bundle 'jistr/vim-nerdtree-tabs'
+		Bundle 'flazz/vim-colorschemes'
+		Bundle 'nathanaelkane/vim-indent-guides'
+		Bundle 'scrooloose/syntastic'
+		"Bundle 'scrooloose/nerdcommenter'
+
+		Bundle 'garbas/vim-snipmate'
+
+    " Javascript
+		Bundle 'elzr/vim-json'
+		Bundle 'pangloss/vim-javascript'
+
+
+    " HTML
+		Bundle 'amirh/HTML-AutoCloseTag'
+		Bundle 'hail2u/vim-css3-syntax'
+
+    " Misc
+		Bundle 'tpope/vim-markdown'
+	"Change root directory automatically 
+		Bundle 'airblade/vim-rooter' 
+		"Bundle 'spf13/vim-preview' "needs ruby
+
+" }
+
+" General {
+    set shortmess+=filmnrxoOtT      " Abbrev. of messages (avoids 'hit enter')
+" }
